@@ -3,6 +3,13 @@ plugins {
 }
 
 android {
+    // This project keeps its manifest directly under app/ rather than src/main/.
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+        }
+    }
+
     compileSdkVersion 30
     buildToolsVersion '30.0.3'
 
